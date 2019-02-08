@@ -18,5 +18,5 @@ The indicator is proposed in the article above to indicate whether the classific
 
 Please, refer to http://dx.doi.org/10.17632/5c442vbjzg.1 for the Mendeley Data (**Binary-Classification Performance Evaluation Reporting Survey Data with the Findings**) providing comprehensive findings related to binary-classification performance evaluation reporting issues of **78 academic studies** within the last 7 years (2012–2018) that model some machine learning **Android malware classifiers** and report their performance evaluation using some metrics.
 
-**Note**: Please, cite our article if you would like to use and/or adapt the code, datasets, methodology, and other materials provided and let us know. Thank you for your interest. Note that visualized scheme is a copyrighted material and all rights are reserved by Gürol Canbek. You can use the scheme for personal purposes or academical studies by giving a citation to the article above.
+**Note**: Please, cite our article if you would like to use and/or adapt the code, datasets, methodology, and other materials provided and let us know. Thank you for your interest. Be aware that the visualized scheme is a copyrighted material and all rights are reserved by Gürol Canbek. You can use the scheme for personal purposes or academical studies by giving a citation to the article above.
 
