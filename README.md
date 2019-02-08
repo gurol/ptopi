@@ -12,7 +12,7 @@ The platform provides the following materials:
 - **perfscheme.dot** and **perfscheme.pdf**: Dependency graph codes and outputs for 49 performance measures and metrics ([Graphviz file](https://www.graphviz.org))
 - **accbarrier.R**: Open-source R script for calculating the new classification **performance indicator called Accuracy Barrier (*ACCBAR*)** ([R](https://www.r-project.org) file)
 
-The visualized scheme presents comprehensive information related to **50 binary-classification performance instruments** (measures, metrics, and indicators).
+The visualized scheme presents comprehensive information related to **50 binary-classification performance instruments** (measures, metrics, and indicators). It is like a "periodic table of performance instruments".
 The indicator is proposed in the article above to indicate whether the classification performance is close to random classifier's performance.
 2ClassPerfScheme file also provides a sheet to calculate Accuracy Barrier indicator values and categories interactively.
 
