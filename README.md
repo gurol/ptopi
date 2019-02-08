@@ -14,7 +14,7 @@ The platform provides the following materials:
 
 The visualized scheme presents comprehensive information related to 50 binary-classification performance instruments (measures, metrics, and indicators).
 The indicator is proposed in the article above to indicate whether the classification performance is close to random classifier's performance.
-2ClassPerfScheme file provides a sheet to calculate Accuracy Barrier indicator values and categories interactively.
+2ClassPerfScheme file also provides a sheet to calculate Accuracy Barrier indicator values and categories interactively.
 
 Please, refer to http://dx.doi.org/10.17632/5c442vbjzg.1 for the Mendeley Data (Binary-Classification Performance Evaluation Reporting Survey Data with the Findings) providing comprehensive findings related to binary-classification performance evaluation reporting issues of 78 academic studies within the last 7 years (2012–2018) that model some machine learning Android malware classifiers and report their performance evaluation using some metrics.
 
