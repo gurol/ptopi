@@ -1,3 +1,30 @@
+#' # ACCBAR - Accuracy Barrier Indicator
+#' @author Gürol Canbek, <gurol44@gmail.com>  
+#' Copyright (C) 2017-2019 Gürol CANBEK  
+#' This file is licensed under  
+#' 
+#'   A p a c h e   L i c e n s e   2 . 0  
+#' 
+#' A permissive license whose main conditions require preservation of copyright  
+#' and license notices. Contributors provide an express grant of patent rights.  
+#' Licensed works, modifications, and larger works may be distributed under  
+#' different terms and without source code.  
+#'  
+#' See the license file in <https://github.com/gurol/ptopi>  
+#' @references <http://gurol.canbek.com>  
+#' @keywords classification, performance evaluation, metrics, indicator, accuracy  
+#' @title Accuracy Barrier Indicator (ACCBAR)  
+#' @version 1.0  
+#' @description R functions for calculating a novel performance evaluation
+#' indicator named Accuracy Barriers (ACC). The indicator is proposed by
+#' Gürol Canbek to identify whether the classification performance is close to
+#' random classifier's performance
+#' @note version history  
+#' 1.1, 20 June 2019, Names are changed
+#' 1.0, 17 June 2017, The first version
+#' @date 20 June 2019  
+
+#' libraries  
 library(plyr)
 
 accbar.category.names <- c('Over', 'Close', 'Very Close', 'Hit', 'Under')
