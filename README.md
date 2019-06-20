@@ -8,7 +8,7 @@ This platform is a research compedium of our academic publication below.
 > [Gürol Canbek](http:gurol.canbek.com/Publications), Tugba Taskaya Temizel, and Seref Sagiroglu (2019). Multi-Perspective Analysis of Binary-Classification Performance Evaluation Instruments, *Performance Evaluation*, Elsevier (Submitted).
 
 The platform provides the following materials:
-- **PToPI.xlsx**: Binary-Classification Performance Instruments Table (Microsoft Excel™ file)
+- **PToPI.xlsx**: Periodic Table of (Binary-Classification) Performance (Evaluation) Instruments (open with Microsoft Excel™)
 - **PToPI.dot** and **BicPiT.pdf**: Dependency graph codes and outputs for 49 performance measures and metrics ([Graphviz file](https://www.graphviz.org))
 - **accbarrier.R**: Open-source R script for calculating the new classification **performance indicator called Accuracy Barrier (*ACCBAR*)** ([R](https://www.r-project.org) file)
 
