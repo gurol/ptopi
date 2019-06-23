@@ -18,7 +18,7 @@ An exploratory table (PToPI) presents the novel concepts introduced from multi-p
 The indicator is proposed in the article above to identify whether the classification performance is close to random classifier's performance.
 PToPI.xlsx file also provides a sheet to calculate Accuracy Barrier (*ACCBAR*) indicator values and categories interactively.
 
-Please, refer to http://dx.doi.org/10.17632/5c442vbjzg.1 for the Mendeley Data (**Binary-Classification Performance Evaluation Reporting Survey Data with the Findings**) providing comprehensive findings related to binary-classification performance evaluation reporting issues of **78 academic studies** within the last 7 years (2012–2018) that model some machine learning based **Android malware detection classifiers** and report their performance evaluation using some metrics.
+Please, refer to http://dx.doi.org/10.17632/5c442vbjzg.2 for the Mendeley Data (**Binary-Classification Performance Evaluation Reporting Survey Data with the Findings**) providing comprehensive findings related to binary-classification performance evaluation reporting issues of **78 academic studies** within the last 7 years (2012–2018) that model some machine learning based **Android malware detection classifiers** and report their performance evaluation using some metrics.
 
 **Note**: Please, cite our article if you would like to use and/or adapt the code, datasets, methodology, and other materials provided and let us know. Thank you for your interest. Be aware that **the exploratory table PToPO is a copyrighted material** and all rights are reserved by Gürol Canbek. You can use PToPO for personal purposes or academical studies by giving a citation to the article above.
 
