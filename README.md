@@ -5,7 +5,7 @@
 
 This platform is a research compedium of our academic publication below.
 
-> [Gürol Canbek](http:gurol.canbek.com/Publications), Tugba Taskaya Temizel, and Seref Sagiroglu (2019). Multi-Perspective Analysis of Binary-Classification Performance Evaluation Instruments, *Performance Evaluation*, Elsevier (Submitted).
+> [Gürol Canbek](http:gurol.canbek.com/Publications), Tugba Taskaya Temizel, and Seref Sagiroglu (2019). Multi-Perspective Analysis of Binary-Classification Performance Evaluation Instruments, *Information Processing & Management*, Elsevier (Submitted).
 
 The platform provides the following materials:
 - **PToPI.xlsx**: Periodic Table of (Binary-Classification) Performance (Evaluation) Instruments (open with Microsoft Excel™)
