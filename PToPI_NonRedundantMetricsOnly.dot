@@ -1,0 +1,166 @@
+# Binary Classification Performance Metrics/Measures Dependency Graph (Non Redundant Metrics Only)
+# Author: Gurol Canbek, gurol44@gmail.com
+# Version: 1.3
+# Date: 19 September 2017
+# Copyright (C) 2017 Gürol Canbek, All Rights Reserved
+digraph BinClassRoadMap {
+	size = "320, 240"
+	dpi = 96.0
+	# subgraph cluster_base_measures {
+	# 	TP FP FN TN
+	# 	label="BaseMeasures" 
+	# }
+
+	# Nodes for base measures
+	TP[label=<<b><i>TP</i></b>> style="filled" fillcolor="#ffcccc" fontcolor="#cc0000" penwidth=1.0]
+	FP[label=<<b><i>FP</i></b>> style="filled" fillcolor="#ccffcc" fontcolor="#5e0002" penwidth=1.0]
+	FN[label=<<b><i>FN</i></b>> style="filled" fillcolor="#ffcccc" fontcolor="#005e02" penwidth=1.0]
+	TN[label=<<b><i>TN</i></b>> style="filled" fillcolor="#ccffcc" fontcolor="#009900" penwidth=1.0]
+	# Nodes for 1st level measures
+	P[label=<<b><i>P</i></b>> style="filled" fillcolor="#990000" fontcolor="#ff5050" penwidth=2.5]
+	N[label=<<b><i>N</i></b>> style="filled" fillcolor="#006600" fontcolor="#33cc33" penwidth=2.5]
+	OP[label=<<b><i>OP</i></b>> style="filled" fillcolor="#cc9999" fontcolor="#ffcccc" penwidth=2.5]
+	ON[label=<<b><i>ON</i></b>> style="filled" fillcolor="#99cc99" fontcolor="#ccffcc" penwidth=2.5]
+	TC[label=<<b><i>TC</i></b>> style="filled" fillcolor="#77cccc" fontcolor="#117777" penwidth=2.5]
+	FC[label=<<b><i>FC</i></b>> style="filled" fillcolor="#ffccff" fontcolor="#7030a0" penwidth=2.5]
+	Sn[label=<<b><i>Sn</i></b>> style="filled" fillcolor="#999966" fontcolor="black" penwidth=2.5]
+	# Nodes for 2nd level measures
+	# PREV[label=<<b><i>PREV</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5]
+	# BIAS[label=<<b><i>BIAS</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5]
+	# SKEW[label=<<b><i>SKEW</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5]
+	# NIR[label=<<b><i>NIR</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5]
+	# NER[label=<<b><i>NER</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5]
+	CKc[label=<<b><i>CKc</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5]
+	# LRP[label=<<b><i>LRP</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5]
+	# LRN[label=<<b><i>LRN</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5]
+	# DPR[label=<<b><i>DPR</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5]
+	# Nodes for 3rd level measures
+	# OR[label=<<b><i>OR</i></b>> style="filled" fillcolor="#f2f2f2" fontcolor="black" penwidth=6.0]
+	# DP[label=<<b><i>DP</i></b>> style="filled" fillcolor="#f2f2f2" fontcolor="black" penwidth=6.0]
+
+	# Nodes for base metrics
+	TPR[label=<<b><i>TPR</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0]
+	# FNR[label=<<b><i>FNR</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+	TNR[label=<<b><i>TNR</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0]
+	# FPR[label=<<b><i>FPR</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+	PPV[label=<<b><i>PPV</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0]
+	# FDR[label=<<b><i>FDR</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+	# FOR[label=<<b><i>FOR</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+	NPV[label=<<b><i>NPV</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0]
+	ACC[label=<<b><i>ACC</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0]
+	# MCR[label=<<b><i>MCR</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+	DR[label=<<b><i>DR</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0]
+	CRR[label=<<b><i>CRR</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0]
+	# Nodes for 1st level metrics
+	INFORM[label=<<b><i>INFORM</i></b>> style="filled" color="#bf5807" fillcolor="#ffe699" fontcolor="#bf5807" penwidth=2.5]
+	MARK[label=<<b><i>MARK</i></b>> style="filled" color="#bf5807" fillcolor="#ffe699" fontcolor="#bf5807" penwidth=2.5]
+	BACC[label=<<b><i>BACC</i></b>> style="filled" color="#bf5807" fillcolor="#ffe699" fontcolor="#bf5807" penwidth=2.5]
+	Gm[label=<<b><i>Gm</i></b>> style="filled" color="#bf5807" fillcolor="#ffe699" fontcolor="#bf5807" penwidth=2.5]
+	Fscores[label=<<b><i>Fscores</i></b>> style="filled" color="#bf5807" fillcolor="#ffd966" fontcolor="#bf5807" penwidth=2.5]
+	CK[label=<<b><i>CK</i></b>> style="filled" color="#bf5807" fillcolor="#ffe699" fontcolor="#bf5807" penwidth=2.5]
+	# Nodes for 2nd level metric
+	MCC[label=<<b><i>MCC</i></b>> style="filled" color="#e66a09" fillcolor="#fff2cc" fontcolor="#e66a09" penwidth=5.0]
+
+	# Edges for measures dependencies
+	# P -> TP
+	# P -> FN
+	# N -> FP
+	# N -> TN
+	# OP -> TP
+	# OP -> FP
+	# ON -> FN
+	# ON -> TN
+	# TC -> TP
+	# TC -> TN
+	# FC -> FP
+	# FC -> FN
+	# Sn -> TP
+	# Sn -> FP
+	# Sn -> TN
+	# Sn -> FN
+	# Sn -> P
+	# Sn -> N
+	# Sn -> OP
+	# Sn -> ON
+	# Sn -> TC
+	# Sn -> FC
+	# PREV -> P [label="12.1"]
+	# PREV -> Sn [label="12.2"]
+	# BIAS -> OP [label="13.1"]
+	# BIAS -> Sn [label="13.2"]
+	# SKEW -> N [label="14.1"]
+	# SKEW -> P [label="14.2"]
+	# NIR -> P [label="15.1"]
+	# NIR -> N [label="15.2"]
+	# NIR -> Sn [label="15.3"]
+	# NER -> N [label="16.1"]
+	# NER -> Sn [label="16.2"]
+	CKc -> P
+	CKc -> OP
+	CKc -> N
+	CKc -> ON
+	CKc -> Sn
+	# DPR -> TPR [label="18.1"]
+	# Z(1-TNR)
+	# DPR -> FPR [label="18.2"]
+	# LRP -> TPR [label="19.1"]
+	# LRP -> FPR [label="19.2"]
+	# LRN -> FNR [label="20.1"]
+	# LRN -> TNR [label="20.2"]
+	# OR -> LRP [label="21.1"]
+	# OR -> LRN [label="21.2"]
+	# DP -> LRP [label="22.1"]
+	# DP -> LRN [label="22.2"]
+	# DP -> OR [style="dotted"]
+
+	# {rank=same DP OR}
+	
+	# Edges for metrics dependencies
+	TPR -> TP [color="#984707"]
+	TPR -> P [color="#984707"]
+	# FNR -> FN [color="#984707"]
+	# FNR -> P [color="#984707"]
+	TNR -> TN [color="#984707"]
+	TNR -> N [color="#984707"]
+	# FPR -> FP [color="#984707"]
+	# FPR -> N [color="#984707"]
+	PPV -> TP [color="#984707"]
+	PPV -> OP [color="#984707"]
+	# FDR -> FP [color="#984707"]
+	# FDR -> OP [color="#984707"]
+	# FOR -> FN [color="#984707"]
+	# FOR -> ON [color="#984707"]
+	NPV -> TN [color="#984707"]
+	NPV -> ON [color="#984707"]
+	ACC -> TC [color="#984707"]
+	ACC -> Sn [color="#984707"]
+	# MCR -> FC [color="#984707"]
+	# MCR -> Sn [color="#984707"]
+	# MCR -> ACC [
+	DR -> TP [color="#984707"]
+	DR -> Sn [color="#984707"]
+	CRR -> TN [color="#984707"]
+	CRR -> Sn [color="#984707"]
+	# 1st level metrics
+	INFORM -> TPR [color="#bf5807"]
+	INFORM -> TNR [color="#bf5807"]
+	MARK -> PPV [color="#bf5807"]
+	MARK -> NPV [color="#bf5807"]
+	BACC -> TPR [color="#bf5807"]
+	BACC -> TNR [color="#bf5807"]
+	Gm -> TPR [color="#bf5807"]
+	Gm -> TNR [color="#bf5807"]
+	Fscores -> PPV [color="#bf5807"]
+	Fscores -> TPR [color="#bf5807"]
+	CK -> ACC [color="#bf5807"]
+	CK -> CKc [color="#bf5807"]
+	# 2nd level metric
+	MCC -> INFORM [color="#e66a09"]
+	MCC -> MARK [color="#e66a09"]
+
+	{rank=same TP FP FN TN}
+    {rank=same TC FC}
+	# {rank=same P N OP ON TC FC}
+	# {rank=same TPR FPR FNR TNR}
+	# {rank=same PPV FDR FOR NPV}
+}
