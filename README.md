@@ -5,14 +5,14 @@
 
 This platform is a research compedium of our academic publication below.
 
-> [Gürol Canbek](http:gurol.canbek.com/Publications), Tugba Taskaya Temizel, and Seref Sagiroglu (2019). Multi-Perspective Analysis of Binary-Classification Performance Evaluation Instruments, *Information Processing & Management*, Elsevier (Submitted).
+> [Gürol Canbek](http:gurol.canbek.com/Publications), Tugba Taskaya Temizel, and Seref Sagiroglu (2020). Multi-Perspective Analysis of Binary-Classification Performance Evaluation Instruments, *Information Processing & Management*, Elsevier (Submitted).
 
 The platform provides the following materials:
 - **PToPI.xlsx**: Periodic Table of (Binary-Classification) Performance (Evaluation) Instruments (open with Microsoft Excel™)
 - **PToPI.dot**, **PToPI_NonRedundantMetricsOnly.dot**, and **BicPiT.pdf**: Dependency graph codes and outputs for 49 performance measures and metrics ([Graphviz file](https://www.graphviz.org)). You can try dot files online at (https://edotor.net)
 - **accbarrier.R**: Open-source R script for calculating the new classification **performance indicator called Accuracy Barrier (*ACCBAR*)** ([R](https://www.r-project.org) file)
 
-![](images/Figure_PToPI_Full_v2_7_5.png)
+![](images/PToPI_v3_3.png)
 
 An exploratory table (PToPI) presents the novel concepts introduced from multi-perspective analysis of **50 binary-classification performance instruments** (measures, metrics, and indicators). It is like a "periodic table of elements" in chemisstry.
 The indicator is proposed in the article above to identify whether the classification performance is close to random classifier's performance.
