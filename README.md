@@ -5,7 +5,7 @@
 
 This platform is a research compedium of our academic publication below.
 
-> [Gürol Canbek](http:gurol.canbek.com/Publications), Tugba Taskaya Temizel, and Seref Sagiroglu (2020). Multi-Perspective Analysis of Binary-Classification Performance Evaluation Instruments, *Information Processing & Management*, Elsevier (Submitted).
+> [Gürol Canbek](http:gurol.canbek.com/Publications), Tugba Taskaya Temizel, and Seref Sagiroglu (2020). Multi-Perspective Analysis of Binary-Classification Performance Evaluation Instruments, *TBD*, Elsevier (Ready-to-submit).
 
 The platform provides the following materials:
 - **PToPI.xlsx**: Periodic Table of (Binary-Classification) Performance (Evaluation) Instruments (open with Microsoft Excel™)
@@ -23,7 +23,7 @@ Please, refer to http://dx.doi.org/10.17632/5c442vbjzg.2 for the Mendeley Data (
 
 The following measures/metrics are presented in PToPI (alphabetic order):
 
-**M E A S U R E S**
+__**M E A S U R E S**__
 **Base Measures (BM) (4 measures)**:
 - ***FN***: False Negatives
 - ***FP***: False Positives
@@ -60,11 +60,11 @@ The following measures/metrics are presented in PToPI (alphabetic order):
 
 **3rd Level Measures (4 measures)**
 - *DP*: Discriminant Power
-- *HC*: Class Entropy
-- *HO*: Outcome Entropy
+- *HC*: Class Entropy*
+- *HO*: Outcome Entropy*
 - *OR*: Odds Ratio
 
-**M E T R I C S**
+__**M E T R I C S**__
 **Base Metrics (14 metrics)**
 - *ACC*: Accuracy (efficiency, rand index)
 - *CRR*: (Correct) Rejection Rate
@@ -73,9 +73,9 @@ The following measures/metrics are presented in PToPI (alphabetic order):
 - *FNR*: False Negative Rate (miss rate)
 - *FOR*: False Omission Rate (imprecision)
 - *FPR*: False Positive Rate (fall-out)
-- *HOC*: Joint Entropy
+- *HOC*: Joint Entropy*
 - *MCR*: Misclassification Rate
-- *MI*: Mutual Information
+- *MI*: Mutual Information*
 - *NPV*: Negative Predictive Value
 - *PPV*: Positive Predictive Value (precision, confidence)
 - *TNR*: True Negative Rate (inverse recall, specificity)
@@ -90,7 +90,7 @@ The following measures/metrics are presented in PToPI (alphabetic order):
 - *G*: G metric (G-mean, Fowlkes-Mallows index)
 - *INFORM*: Informedness (Youden’s index, delta P', Peirce skill score)
 - *MARK*: Markedness (delta P, Clayton skill score, predictive summary index)
-- *nMI*: Normalized Mutual Information
+- *nMI*: Normalized Mutual Information*
 - *wACC*: Weighted Accuracy
 (Graphical metrics):
 - *AUCROC*: Area-Under-ROC-Curve (ROC: Receiver Operating Curve)
@@ -98,3 +98,5 @@ The following measures/metrics are presented in PToPI (alphabetic order):
 
 **2nd Level Metric (1 metric)**
 - *MCC*: Matthews Correlation Coefficient (Phi correlation coefficient, Cohen’s index, Yule phi)
+
+* Entropic instruments (*HC*, *HO*, *HOC*, *MI*, and *nMI*)
