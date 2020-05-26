@@ -1,0 +1,82 @@
+﻿# Binary-Classification Performance Instruments Dependency Graph
+# (Graphics-based metrics and probabilistic error/loss measures)
+# Author: Gürol Canbek, gurol44@gmail.com
+# Version: 1.5
+# Last Update Date: 26 May 2020
+# First Date: 19 September 2017
+#
+# This file is licensed under  
+# 
+#   G N U   A F F E R O   G E N E R A L   P U B L I C   L I C E N S E
+#        V e r s i o n   3 ,   1 9   N o v e m b e r   2 0 0 7 
+# 
+# perfscheme – Visualized Scheme for Binary-Classification Performance Evaluation
+# Copyright (C) 2017-2020  Gürol Canbek
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#  
+# See the full notice license file in <https://github.com/gurol/ptopi>
+#
+# Usage (graphviz must be installed):
+# dot -Tpdf PToPI.dot -o PToPI.pdf
+digraph BinClassRoadMap {
+	size = "320, 240"
+	dpi = 96.0
+	forcelabels = true
+	# subgraph cluster_base_measures {
+	# 	TP FP FN TN
+	# 	label="BaseMeasures" 
+	# }
+
+	# Nodes for Graphic based metrics
+	TPRs[label=<<b><i>TPRs</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0 peripheries=2]
+	TNRs[label=<<b><i>TNRs</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0 peripheries=2]
+	PPVs[label=<<b><i>PPVs</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0 peripheries=2]
+
+	AUCROC[label=<<b><i>AUCROC</i></b>> style="filled" color="#bf5807" fillcolor="#ffe699" fontcolor="#bf5807" penwidth=1.0 xlabel="AUC: paired metrics for Θ thresholds"]
+	AUCPR[label=<<b><i>AUCPR</i></b>> style="filled" color="#bf5807" fillcolor="#ffe699" fontcolor="#bf5807" penwidth=1.0 xlabel="AUC: paired metrics for Θ thresholds"]
+
+	# Nodes for Probabilistic error/loss measures
+	LogLoss[label=<<b><i>LogLoss</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=1.0 xlabel=<<i>ci - pi</i><br/><i>(1 - ci)(1 - pi)</i>>]
+	MSE[label=<<b><i>MSE</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=1.0 xlabel="mean e^2"]
+	MAE[label=<<b><i>MAE</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=1.0 xlabel="mean |e|"]
+	RMSE[label=<<b><i>RMSE</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=1.0 xlabel="mean √(e^2)"]
+	ME[label=<<b><i>ME</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=1.0 xlabel="max |e|"]
+
+    TypeIerror[label=<<b>Type I error<br/>(~<i>FPR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+	TypeIIerror[label=<<b>Type II error<br/>(~<i>FNR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+	UncertaintyInN[label=<<b>Uncertainty<br/><i>FP</i>&nbsp; in <i>N</i>&nbsp;(~<i>FPR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+	UncertaintyInP[label=<<b>Uncertainty<br/><i>FN</i>&nbsp; in <i>P</i>&nbsp;(~<i>FPR</i>)</b>>style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+
+	# Nodes for Graphic based metrics
+	AUCROC -> TPRs [label="Y-axis" color="#bf5807" style="dashed"]
+	AUCROC -> TNRs [label="X-axis" color="#bf5807" style="dashed"]
+	AUCPR -> PPVs [label="Y-axis" color="#bf5807" style="dashed"]
+	AUCPR -> TPRs [label="X-axis" color="#bf5807" style="dashed"]
+
+	# {rank=same TPRs TNRs PPVs TPR}
+
+    # Nodes for Probabilistic error/loss measures
+	LogLoss -> UncertaintyInP [label="" color="#d9d9d9" style="dashed"]
+	LogLoss -> UncertaintyInN [label="" color="#d9d9d9" style="dashed"]
+	MSE -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
+	MSE -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
+	MAE -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
+	MAE -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
+	RMSE -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
+	RMSE -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
+	ME -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
+	ME -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
+
+	# {rank=same UncertaintyInP UncertaintyInN TypeIerror TypeIIerror FPR FNR}
+}

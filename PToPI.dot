@@ -27,7 +27,7 @@
 # See the full notice license file in <https://github.com/gurol/ptopi>
 #
 # Usage (graphviz must be installed):
-# dot -Tpdf ptopi_full.dot -o ptopi_full.pdf
+# dot -Tpdf PToPI.dot -o PToPI.pdf
 digraph BinClassRoadMap {
 	size = "32, 24"
 	dpi = 96.0
