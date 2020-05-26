@@ -21,16 +21,16 @@ Please, refer to http://dx.doi.org/10.17632/5c442vbjzg.2 for the Mendeley Data (
 
 **Note**: Please, cite our article if you would like to use and/or adapt the code, datasets, methodology, and other materials provided and let us know. Thank you for your interest. Be aware that **the exploratory table PToPI is a copyrighted material** and all rights are reserved by Gürol Canbek. You can use PToPI for personal purposes or academical studies by giving a citation to the article above.
 
-The following measures/metrics are presented in PToPI (alphabetic order):
+The following measures/metrics are presented in PToPI (alphabetic order with alternative naming):
 
-__**M E A S U R E S**__
-**Base Measures (BM) (4 measures)**:
+## Performance Measures (31 measures)
+### Base Measures (BM) (4 measures)
 - ***FN***: False Negatives
 - ***FP***: False Positives
 - ***TN***: True Negatives
 - ***TP***: True Positives
 
-**1st Level Measures (7 measures)**:
+### 1st Level Measures (7 measures)
 - ***N***: Negatives
 - ***P***: Positives
 - ***ON***: Outcome Negatives
@@ -39,7 +39,11 @@ __**M E A S U R E S**__
 - ***TC***: True Classification
 - ***Sn***: Sample Size
 
-**2nd Level Measures (16 measures)**
+Notes 1:
+- We propose "canonical measures" as the combination of base and 1st level measures
+- We introduce ***TC*** and ***FC*** as the diagonal and off-diagonal confusion matrix elements (*i.e.* base measures)
+
+### 2nd Level Measures (16 measures)
 - *BIAS*: Bias
 - *CKc*: Cohen's Kappa Chance,
 - ***DET***: Determinant
@@ -58,14 +62,14 @@ __**M E A S U R E S**__
 - *RMSE*: Root Mean Square Error
 - *ME*: Maximum Error
 
-**3rd Level Measures (4 measures)**
+### 3rd Level Measures (4 measures)
 - *DP*: Discriminant Power
 - *HC*: Class Entropy*
 - *HO*: Outcome Entropy*
 - *OR*: Odds Ratio
 
-__**M E T R I C S**__
-**Base Metrics (14 metrics)**
+## Performance Metrics (28 metrics)
+### Base Metrics (14 metrics)
 - *ACC*: Accuracy (efficiency, rand index)
 - *CRR*: (Correct) Rejection Rate
 - *DR*: Detection Rate
@@ -81,7 +85,7 @@ __**M E T R I C S**__
 - *TNR*: True Negative Rate (inverse recall, specificity)
 - *TPR*: True Positive Rate (recall, sensitivity, hit rate, recognition rate)
 
-**1st Level Metrics (13 metrics)**
+### 1st Level Metrics (13 metrics)
 - *BACC*: Balanced Accuracy (strength)
 - *CK*: Cohen's Kappa (Heidke skill score, quality index)
 - *Fm*: F-metrics (for all weights)
@@ -96,7 +100,8 @@ __**M E T R I C S**__
 - *AUCROC*: Area-Under-ROC-Curve (ROC: Receiver Operating Curve)
 - *AUCPR*: Area-Under-Precision-Recall-Curve
 
-**2nd Level Metric (1 metric)**
+### 2nd Level Metric (1 metric)
 - *MCC*: Matthews Correlation Coefficient (Phi correlation coefficient, Cohen’s index, Yule phi)
 
-* Entropic instruments (*HC*, *HO*, *HOC*, *MI*, and *nMI*)
+Notes 2:
+- Entropic instruments (*HC*, *HO*, *HOC*, *MI*, and *nMI*)
