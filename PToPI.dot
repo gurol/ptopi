@@ -1,7 +1,7 @@
-# Binary-Classification Performance Metrics/Measures Dependency Graph
+# Binary-Classification Performance Instruments Dependency Graph
 # Author: Gürol Canbek, gurol44@gmail.com
-# Version: 1.4
-# Last Update Date: 5 February 2019
+# Version: 1.5
+# Last Update Date: 26 May 2020
 # First Date: 19 September 2017
 #
 # This file is licensed under  
@@ -10,7 +10,7 @@
 #        V e r s i o n   3 ,   1 9   N o v e m b e r   2 0 0 7 
 # 
 # perfscheme – Visualized Scheme for Binary-Classification Performance Evaluation
-# Copyright (C) 2017-2019  Gürol Canbek
+# Copyright (C) 2017-2020  Gürol Canbek
 # 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published
@@ -24,13 +24,14 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #  
-# See the full notice license file in <https://github.com/gurol/perfscheme>
+# See the full notice license file in <https://github.com/gurol/ptopi>
 #
 # Usage (graphviz must be installed):
-# dot -Tpdf perfscheme.dot -o perfscheme.pdf
+# dot -Tpdf ptopi_full.dot -o ptopi_full.pdf
 digraph BinClassRoadMap {
 	size = "32, 24"
 	dpi = 96.0
+	forcelabels = true
 	# subgraph cluster_base_measures {
 	# 	TP FP FN TN
 	# 	label="BaseMeasures" 
@@ -92,6 +93,26 @@ digraph BinClassRoadMap {
 	CK[label=<<b><i>CK</i></b>> style="filled" color="#bf5807" fillcolor="#ffe699" fontcolor="#bf5807" penwidth=2.5]
 	# Nodes for 2nd level metric
 	MCC[label=<<b><i>MCC</i></b>> style="filled" color="#e66a09" fillcolor="#fff2cc" fontcolor="#e66a09" penwidth=5.0]
+
+	# Nodes for Graphic based metrics
+	TPRs[label=<<b><i>TPRs</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0 peripheries=2]
+	TNRs[label=<<b><i>TNRs</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0 peripheries=2]
+	PPVs[label=<<b><i>PPVs</i></b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0 peripheries=2]
+
+	AUCROC[label=<<b><i>AUCROC</i></b>> style="filled" color="#bf5807" fillcolor="#ffe699" fontcolor="#bf5807" penwidth=2.5]
+	AUCPR[label=<<b><i>AUCPR</i></b>> style="filled" color="#bf5807" fillcolor="#ffe699" fontcolor="#bf5807" penwidth=2.5]
+
+	# Nodes for Probabilistic error/loss measures
+	LogLoss[label=<<b><i>LogLoss</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5 xlabel=<<i>ci - pi</i><br/><i>(1 - ci)(1 - pi)</i>>]
+	MSE[label=<<b><i>MSE</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5 xlabel="mean e^2"]
+	MAE[label=<<b><i>MAE</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5 xlabel="mean |e|"]
+	RMSE[label=<<b><i>RMSE</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5 xlabel="mean √(e^2)"]
+	ME[label=<<b><i>ME</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=4.5 xlabel="max |e|"]
+
+    TypeIerror[label=<<b>Type I error<br/>(~<i>FPR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+	TypeIIerror[label=<<b>Type II error<br/>(~<i>FNR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+	UncertaintyInN[label=<<b>Uncertainty<br/><i>FP</i>&nbsp; in <i>N</i>&nbsp;(~<i>FPR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+	UncertaintyInP[label=<<b>Uncertainty<br/><i>FN</i>&nbsp; in <i>P</i>&nbsp;(~<i>FPR</i>)</b>>style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
 
 	# Edges for measures dependencies
 	P -> TP [label="+5" style=invis]
@@ -187,6 +208,13 @@ digraph BinClassRoadMap {
 	ACC -> Sn [label="/" color="#984707"]
 	MCR -> FC [label="14" color="#984707" style=invis]
 	MCR -> Sn [label="/14" color="#984707" style=invis]
+
+	# TPRs -> TP [label="1" color="#984707" style=invis]
+	# TPRs -> P [label="/1" color="#984707" style=invis]
+	# TNRs -> TN [label="3" color="#984707" style=invis]
+	# TNRs -> N [label="/3" color="#984707" style=invis]
+	# PPVs -> TP [label="5" color="#984707" style=invis]
+	# PPVs -> OP [label="/5" color="#984707" style=invis]
 	
 	# 1st level metrics
 	# 15
@@ -214,6 +242,28 @@ digraph BinClassRoadMap {
 	# 2nd level metric (24)
 	MCC -> INFORM [label="√*" color="#e66a09"]
 	MCC -> MARK [label="√*" color="#e66a09"]
+
+	# Nodes for Graphic based metrics
+	AUCROC -> TPRs [label="+" color="#bf5807" style="dashed"]
+	AUCROC -> TNRs [label="+" color="#bf5807" style="dashed"]
+	AUCPR -> PPVs [label="+" color="#bf5807" style="dashed"]
+	AUCPR -> TPRs [label="+" color="#bf5807" style="dashed"]
+
+	{rank=same TPRs TNRs PPVs TPR}
+
+    # Nodes for Probabilistic error/loss measures
+	LogLoss -> UncertaintyInP [label="" color="#d9d9d9" style="dashed"]
+	LogLoss -> UncertaintyInN [label="" color="#d9d9d9" style="dashed"]
+	MSE -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
+	MSE -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
+	MAE -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
+	MAE -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
+	RMSE -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
+	RMSE -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
+	ME -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
+	ME -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
+
+	{rank=same UncertaintyInP UncertaintyInN TypeIerror TypeIIerror FPR FNR}
 
     # {rank=same TP FP FN TN}
 	# {rank=same TP FP FN TN}
