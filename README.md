@@ -55,6 +55,7 @@ Notes 1:
 - *NIR*: No Information Rate (non-information rate)
 - *PREV*: Prevalence
 - *SKEW*: (Class) Skew
+
 (Probabilistic error/loss measures):
 - *LogLoss*: (binary cross-entropy)
 - *MSE*: Mean Squared Error
@@ -96,6 +97,7 @@ Notes 1:
 - *MARK*: Markedness (delta P, Clayton skill score, predictive summary index)
 - *nMI*: Normalized Mutual Information*
 - *wACC*: Weighted Accuracy
+
 (Graphical metrics):
 - *AUCROC*: Area-Under-ROC-Curve (ROC: Receiver Operating Curve)
 - *AUCPR*: Area-Under-Precision-Recall-Curve
