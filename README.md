@@ -9,7 +9,7 @@ This platform is a research compedium of our academic publication below.
 
 The platform provides the following materials:
 - **PToPI.xlsx**: Periodic Table of (Binary-Classification) Performance (Evaluation) Instruments (open with Microsoft Excel™)
-- **PToPI.dot**, **PToPI_NonRedundantMetricsOnly.dot**, and **BicPiT.pdf**: Dependency graph codes and outputs for 49 performance measures and metrics ([Graphviz file](https://www.graphviz.org)). You can try dot files online at (https://edotor.net)
+- **PToPI.dot**, **PToPI_NonRedundantMetricsOnly.dot**, and **PToPI.pdf**: Dependency graph codes and outputs for 49 performance measures and metrics ([Graphviz file](https://www.graphviz.org)). You can try dot files online at (https://edotor.net)
 - **accbarrier.R**: Open-source R script for calculating the new classification **performance indicator called Accuracy Barrier (*ACCBAR*)** ([R](https://www.r-project.org) file)
 
 ![](images/PToPI_v3_3_Full.png)
