@@ -48,15 +48,15 @@ digraph BinClassRoadMap {
 
 	# Nodes for Probabilistic error/loss measures
 	LogLoss[label=<<b><i>LogLoss</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=1.0 xlabel=<<i>ci - pi</i><br/><i>(1 - ci)(1 - pi)</i>>]
-	MSE[label=<<b><i>MSE</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=1.0 xlabel="mean e^2"]
-	MAE[label=<<b><i>MAE</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=1.0 xlabel="mean |e|"]
-	RMSE[label=<<b><i>RMSE</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=1.0 xlabel="mean √(e^2)"]
-	ME[label=<<b><i>ME</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=1.0 xlabel="max |e|"]
+    nsMAPE[label=<<b><i>nsMAPE</i></b>> style="filled" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0 xlabel=""]
+    MAE[label=<<b><i>MAE</i></b>> style="filled" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0 xlabel="mean |e|"]
+	MSE[label=<<b><i>MSE</i></b>> style="filled" fillcolor="#ffd966" fontcolor="#984707" penwidth=1.0 xlabel="mean e^2"]
+    MRAE[label=<<b><i>MRAE</i></b>> style="filled" fillcolor="#d9d9d9" fontcolor="black" penwidth=1.0 xlabel=""]
 
-    TypeIerror[label=<<b>Type I error<br/>(~<i>FPR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
-	TypeIIerror[label=<<b>Type II error<br/>(~<i>FNR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
-	UncertaintyInN[label=<<b>Uncertainty<br/><i>FP</i>&nbsp; in <i>N</i>&nbsp;(~<i>FPR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
-	UncertaintyInP[label=<<b>Uncertainty<br/><i>FN</i>&nbsp; in <i>P</i>&nbsp;(~<i>FPR</i>)</b>>style="filled" color="#984707" fillcolor="#ffd966" fontcolor="#a6a6a6" penwidth=1.0]
+    TypeIerror[label=<<b>Type I error<br/>(~<i>FPR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" penwidth=1.0]
+	TypeIIerror[label=<<b>Type II error<br/>(~<i>FNR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" penwidth=1.0]
+	UncertaintyInN[label=<<b>Uncertainty<br/><i>FP</i>&nbsp; in <i>N</i>&nbsp;(~<i>FPR</i>)</b>> style="filled" color="#984707" fillcolor="#ffd966" penwidth=1.0]
+	UncertaintyInP[label=<<b>Uncertainty<br/><i>FN</i>&nbsp; in <i>P</i>&nbsp;(~<i>FPR</i>)</b>>style="filled" color="#984707" fillcolor="#ffd966" penwidth=1.0]
 
 	# Nodes for Graphic based metrics
 	AUCROC -> TPRs [label="Y-axis" color="#bf5807" style="dashed"]
@@ -69,14 +69,14 @@ digraph BinClassRoadMap {
     # Nodes for Probabilistic error/loss measures
 	LogLoss -> UncertaintyInP [label="" color="#d9d9d9" style="dashed"]
 	LogLoss -> UncertaintyInN [label="" color="#d9d9d9" style="dashed"]
+	MRAE -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
+	MRAE -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
 	MSE -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
 	MSE -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
 	MAE -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
 	MAE -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
-	RMSE -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
-	RMSE -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
-	ME -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
-	ME -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
+	nsMAPE -> TypeIerror [label="" color="#a6a6a6" style="dashed"]
+	nsMAPE -> TypeIIerror [label="" color="#a6a6a6" style="dashed"]
 
 	# {rank=same UncertaintyInP UncertaintyInN TypeIerror TypeIIerror FPR FNR}
 }
