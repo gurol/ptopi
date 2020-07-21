@@ -24,24 +24,20 @@ Please, refer to http://dx.doi.org/10.17632/5c442vbjzg.3 for the Mendeley Data (
 The following measures/metrics are presented in PToPI (alphabetic order with alternative naming):
 
 ## Performance Measures (29 measures)
-### Base Measures (BM) (4 measures)
+### Base Measures (BM) (4 measures)<sup>1</sup>
 - ***FN***: False Negatives
 - ***FP***: False Positives
 - ***TN***: True Negatives
 - ***TP***: True Positives
 
-### 1st Level Measures (7 measures)
+### 1st Level Measures (7 measures)<sup>1</sup>
 - ***N***: Negatives
 - ***P***: Positives
 - ***ON***: Outcome Negatives
 - ***OP***: Outcome Positives
-- ***FC***: False Classification
-- ***TC***: True Classification
+- ***FC***: False Classification<sup>2</sup>
+- ***TC***: True Classification<sup>2</sup>
 - ***Sn***: Sample Size
-
-Notes 1:
-- We propose "canonical measures" as the combination of base and 1st level measures
-- We introduce ***TC*** and ***FC*** as the diagonal and off-diagonal confusion matrix elements (*i.e.* base measures)
 
 ### 2nd Level Measures (16 measures)
 - *BIAS*: Bias
@@ -62,8 +58,8 @@ Notes 1:
 
 ### 3rd Level Measures (4 measures)
 - *DP*: Discriminant Power
-- *HC*: Class Entropy<sup>1</sup>
-- *HO*: Outcome Entropy<sup>1</sup>
+- *HC*: Class Entropy<sup>3</sup>
+- *HO*: Outcome Entropy<sup>3</sup>
 - *LIFT*: Lift
 - *OR*: Odds Ratio
 
@@ -76,7 +72,7 @@ Notes 1:
 - *FNR*: False Negative Rate (miss rate)
 - *FOR*: False Omission Rate (imprecision)
 - *FPR*: False Positive Rate (fall-out)
-- *HOC*: Joint Entropy<sup>1</sup>
+- *HOC*: Joint Entropy<sup>3</sup>
 - *MCR*: Misclassification Rate
 - *MI*: Mutual Information*
 - *NPV*: Negative Predictive Value
@@ -91,7 +87,7 @@ Notes 1:
 - *G*: G metric (G-mean, Fowlkes-Mallows index)
 - *INFORM*: Informedness (Youden’s index, delta P', Peirce skill score)
 - *MARK*: Markedness (delta P, Clayton skill score, predictive summary index)
-- *nMI*: Normalized Mutual Information<sup>1</sup>
+- *nMI*: Normalized Mutual Information<sup>3</sup>
 - *wACC*: Weighted Accuracy (parametric)
 
 (Graphical metrics):
@@ -107,4 +103,6 @@ Notes 1:
 - *MCC*: Matthews Correlation Coefficient (Phi correlation coefficient, Cohen’s index, Yule phi)
 
 Notes:
-1. Entropic instruments (*HC*, *HO*, *HOC*, *MI*, and *nMI*)
+1. We propose "canonical measures" as the combination of base and 1st level measures
+2. We introduce ***TC*** and ***FC*** as the diagonal and off-diagonal confusion matrix elements (*i.e.* base measures)
+3. Entropic instruments (*HC*, *HO*, *HOC*, *MI*, and *nMI*)
