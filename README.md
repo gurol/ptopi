@@ -12,7 +12,7 @@ The platform provides the following materials:
 - **PToPI.dot**, **PToPI_NonRedundantMetricsOnly.dot**, and **PToPI.pdf**: Dependency graph codes and outputs for 57 performance measures and metrics ([Graphviz file](https://www.graphviz.org)). You can try dot files online at (https://edotor.net)
 <!-- - **accbarrier.R**: Open-source R script for calculating the new classification **performance indicator called Accuracy Barrier (*ACCBAR*)** ([R](https://www.r-project.org) file) -->
 
-![](images/PToPI.png)
+![](images/PToPI_Full.png)
 
 An exploratory table (PToPI) presents the novel concepts introduced from multi-perspective analysis of **57 binary-classification performance instruments** (29 measures and 28 metrics with 12 variant and parametric instruments). It is like a "periodic table of elements" in chemisstry.
 <!-- The indicator is proposed in the article above to identify whether the classification performance is close to random classifier's performance. -->
