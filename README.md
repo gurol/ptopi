@@ -9,21 +9,21 @@ This platform is a research compedium of our academic publication below.
 
 The platform provides the following materials:
 - **PToPI.xlsx**: Periodic Table of (Binary-Classification) Performance (Evaluation) Instruments (open with Microsoft Excel™)
-- **PToPI.dot**, **PToPI_NonRedundantMetricsOnly.dot**, and **PToPI.pdf**: Dependency graph codes and outputs for 59 performance measures and metrics ([Graphviz file](https://www.graphviz.org)). You can try dot files online at (https://edotor.net)
-- **accbarrier.R**: Open-source R script for calculating the new classification **performance indicator called Accuracy Barrier (*ACCBAR*)** ([R](https://www.r-project.org) file)
+- **PToPI.dot**, **PToPI_NonRedundantMetricsOnly.dot**, and **PToPI.pdf**: Dependency graph codes and outputs for 57 performance measures and metrics ([Graphviz file](https://www.graphviz.org)). You can try dot files online at (https://edotor.net)
+<!-- - **accbarrier.R**: Open-source R script for calculating the new classification **performance indicator called Accuracy Barrier (*ACCBAR*)** ([R](https://www.r-project.org) file) -->
 
-![](images/PToPI_v3_3_Full.png)
+![](images/PToPI.png)
 
-An exploratory table (PToPI) presents the novel concepts introduced from multi-perspective analysis of **59 binary-classification performance instruments** (31 measures and 28 metrics). It is like a "periodic table of elements" in chemisstry.
-The indicator is proposed in the article above to identify whether the classification performance is close to random classifier's performance.
+An exploratory table (PToPI) presents the novel concepts introduced from multi-perspective analysis of **57 binary-classification performance instruments** (29 measures and 28 metrics with 12 variant and parametric instruments). It is like a "periodic table of elements" in chemisstry.
+<!-- The indicator is proposed in the article above to identify whether the classification performance is close to random classifier's performance. -->
 
-Please, refer to http://dx.doi.org/10.17632/5c442vbjzg.2 for the Mendeley Data (**Binary-Classification Performance Evaluation Reporting Survey Data with the Findings**) providing comprehensive findings related to binary-classification performance evaluation reporting issues of **78 academic studies** within the last 7 years (2012–2018) that model some machine learning based **Android malware detection classifiers** and report their performance evaluation using some metrics.
+Please, refer to http://dx.doi.org/10.17632/5c442vbjzg.3 for the Mendeley Data (**Binary-Classification Performance Evaluation Reporting Survey Data with the Findings**) providing comprehensive findings related to binary-classification performance evaluation reporting issues of **78 academic studies** within the recent 7 years (2012–2018) that model some machine learning based **Android malware detection classifiers** and report their performance evaluation using some metrics.
 
-**Note**: Please, cite our article if you would like to use and/or adapt the code, datasets, methodology, and other materials provided and let us know. Thank you for your interest. Be aware that **the exploratory table PToPI is a copyrighted material** and all rights are reserved by Gürol Canbek. You can use PToPI for personal purposes or academical studies by giving a citation to the article above.
+**Note**: Please, cite our article if you would like to use and/or adapt the code, datasets, methodology, and other materials provided and let us know. Thank you for your interest. Be aware that **the exploratory table/tool PToPI by Gürol Canbek is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)**. You can use PToPI for personal purposes or academical studies by giving a citation to the article above. See the "license for use" in the spreadsheet file.
 
 The following measures/metrics are presented in PToPI (alphabetic order with alternative naming):
 
-## Performance Measures (31 measures)
+## Performance Measures (29 measures)
 ### Base Measures (BM) (4 measures)
 - ***FN***: False Negatives
 - ***FP***: False Positives
@@ -58,15 +58,13 @@ Notes 1:
 
 (Probabilistic error/loss measures):
 - *LogLoss*: (binary cross-entropy)
-- *MSE*: Mean Squared Error
-- *MAE*: Mean Absolute Error
-- *RMSE*: Root Mean Square Error
-- *ME*: Maximum Error
+- *MRAE*: Mean Relative Absolute Error
 
 ### 3rd Level Measures (4 measures)
 - *DP*: Discriminant Power
-- *HC*: Class Entropy*
-- *HO*: Outcome Entropy*
+- *HC*: Class Entropy<sup>1</sup>
+- *HO*: Outcome Entropy<sup>1</sup>
+- *LIFT*: Lift
 - *OR*: Odds Ratio
 
 ## Performance Metrics (28 metrics)
@@ -78,7 +76,7 @@ Notes 1:
 - *FNR*: False Negative Rate (miss rate)
 - *FOR*: False Omission Rate (imprecision)
 - *FPR*: False Positive Rate (fall-out)
-- *HOC*: Joint Entropy*
+- *HOC*: Joint Entropy<sup>1</sup>
 - *MCR*: Misclassification Rate
 - *MI*: Mutual Information*
 - *NPV*: Negative Predictive Value
@@ -89,21 +87,24 @@ Notes 1:
 ### 1st Level Metrics (13 metrics)
 - *BACC*: Balanced Accuracy (strength)
 - *CK*: Cohen's Kappa (Heidke skill score, quality index)
-- *Fm*: F-metrics (for all weights)
-- *F1*: F metric (F-score, F-measure, positive specific agreement)
-- *F2*, *F0.5*, and *Fβ*: F metric with weight 2, 0.5 and β
+- *F1*: F metric (F-score, F-measure, positive specific agreement) (parametric: *Fβ*, e.g., *F0.5*, and *F2* : F metric with weight β, 0.5, and 2)
 - *G*: G metric (G-mean, Fowlkes-Mallows index)
 - *INFORM*: Informedness (Youden’s index, delta P', Peirce skill score)
 - *MARK*: Markedness (delta P, Clayton skill score, predictive summary index)
-- *nMI*: Normalized Mutual Information*
-- *wACC*: Weighted Accuracy
+- *nMI*: Normalized Mutual Information<sup>1</sup>
+- *wACC*: Weighted Accuracy (parametric)
 
 (Graphical metrics):
 - *AUCROC*: Area-Under-ROC-Curve (ROC: Receiver Operating Curve)
 - *AUCPR*: Area-Under-Precision-Recall-Curve
 
+(Probabilistic error/loss metrics):
+- *MSE*: Mean Squared Error (variants: *RMSE*: Root Mean Square Error)
+- *MAE*: Mean Absolute Error (variants: *MdAE*: Median Absolute Error, *MxAE*: Maximum Absolute Error)
+- *nsMAPE*: Normalized Symmetric Mean Absolute Percenage Error
+
 ### 2nd Level Metric (1 metric)
 - *MCC*: Matthews Correlation Coefficient (Phi correlation coefficient, Cohen’s index, Yule phi)
 
-Notes 2:
-- Entropic instruments (*HC*, *HO*, *HOC*, *MI*, and *nMI*)
+Notes:
+1. Entropic instruments (*HC*, *HO*, *HOC*, *MI*, and *nMI*)
