@@ -1,11 +1,11 @@
 ## PToPI – A Research Compedium of
-# Multi-Perspective Analysis of Binary-Classification Performance Evaluation Instruments
+# A Comprehensive Analysis and Knowledge Representation of Binary Classification Performance Measures/Metrics
 
 [![Last-changedate](https://img.shields.io/badge/last%20change-2020--07--21-brightgreen.svg)](https://github.com/gurol/ptopi) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)  [![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--9337--097X-green.svg)](https://orcid.org/0000-0002-9337-097X)
 
 This platform is a research compedium of our academic publication below.
 
-> [Gürol Canbek](http:gurol.canbek.com/Publications), Tugba Taskaya Temizel, and Seref Sagiroglu (2020). Multi-Perspective Analysis of Binary-Classification Performance Evaluation Instruments, *Information Sciences*, Elsevier (submitted).
+> [Gürol Canbek](http:gurol.canbek.com/Publications), Tugba Taskaya Temizel, and Seref Sagiroglu (2021). A Comprehensive Analysis and Knowledge Representation of Binary Classification Performance Measures/Metrics, *IEEE Access*, IEEE (submitted).
 
 The platform provides the following materials:
 - **PToPI.xlsx**: Periodic Table of (Binary-Classification) Performance (Evaluation) Instruments (open with Microsoft Excel™)
