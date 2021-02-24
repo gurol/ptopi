@@ -1,11 +1,13 @@
 ## PToPI – A Research Compedium of
-# A Comprehensive Analysis and Knowledge Representation of Binary Classification Performance Measures/Metrics
+# A submitted article (title will be available after review)
+
+<!-- A Comprehensive Analysis and Knowledge Representation of Binary Classification Performance Measures/Metrics -->
 
 [![Last-changedate](https://img.shields.io/badge/last%20change-2020--07--21-brightgreen.svg)](https://github.com/gurol/ptopi) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)  [![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--9337--097X-green.svg)](https://orcid.org/0000-0002-9337-097X)
 
-This platform is a research compedium of our academic publication below.
+This platform is a research compedium of our academic publication submitted (the information will be available after reviews).
 
-> [Gürol Canbek](http:gurol.canbek.com/Publications), Tugba Taskaya Temizel, and Seref Sagiroglu (2021). A Comprehensive Analysis and Knowledge Representation of Binary Classification Performance Measures/Metrics, *IEEE Access*, IEEE (submitted).
+<!-- > [Gürol Canbek](http:gurol.canbek.com/Publications), Tugba Taskaya Temizel, and Seref Sagiroglu (2021). A Comprehensive Analysis and Knowledge Representation of Binary Classification Performance Measures/Metrics, *Journal*, Journal (submitted). -->
 
 The platform provides the following materials:
 - **PToPI.xlsx**: Periodic Table of (Binary-Classification) Performance (Evaluation) Instruments (open with Microsoft Excel™)
@@ -17,7 +19,7 @@ The platform provides the following materials:
 An exploratory table (PToPI) presents the novel concepts introduced from multi-perspective analysis of **57 binary-classification performance instruments** (29 measures and 28 metrics with 12 variant and parametric instruments). It is like a "periodic table of elements" in chemisstry.
 <!-- The indicator is proposed in the article above to identify whether the classification performance is close to random classifier's performance. -->
 
-Please, refer to http://dx.doi.org/10.17632/5c442vbjzg.3 for the Mendeley Data (**Binary-Classification Performance Evaluation Reporting Survey Data with the Findings**) providing comprehensive findings related to binary-classification performance evaluation reporting issues of **78 academic studies** within the recent 7 years (2012–2018) that model some machine learning based **Android malware detection classifiers** and report their performance evaluation using some metrics.
+Please, refer to online data (will be available after review) <!--http://dx.doi.org/10.17632/5c442vbjzg.3 for the Mendeley Data (**Binary-Classification Performance Evaluation Reporting Survey Data with the Findings**) --> providing comprehensive findings <!-- related to binary-classification performance evaluation reporting issues of **78 academic studies** within the recent 7 years (2012–2018) that model some machine learning based **Android malware detection classifiers** and report their performance evaluation using some metrics. -->
 
 **Note**: Please, cite our article if you would like to use and/or adapt the code, datasets, methodology, and other materials provided and let us know. Thank you for your interest. Be aware that **the exploratory table/tool PToPI by Gürol Canbek is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)**. You can use PToPI for personal purposes or academical studies by giving a citation to the article above. See the "license for use" in the spreadsheet file.
 
