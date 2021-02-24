@@ -21,6 +21,7 @@ Please, refer to http://dx.doi.org/10.17632/5c442vbjzg.3 for the Mendeley Data (
 
 **Note**: Please, cite our article if you would like to use and/or adapt the code, datasets, methodology, and other materials provided and let us know. Thank you for your interest. Be aware that **the exploratory table/tool PToPI by Gürol Canbek is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)**. You can use PToPI for personal purposes or academical studies by giving a citation to the article above. See the "license for use" in the spreadsheet file.
 
+<!---
 The following measures/metrics are presented in PToPI (alphabetic order with alternative naming):
 [//]: # (## Performance Measures (29 measures))
 [//]: # (### Base Measures (BM) (4 measures)<sup>1</sup>)
@@ -95,3 +96,4 @@ The following measures/metrics are presented in PToPI (alphabetic order with alt
 [//]: # (1. We propose "canonical measures" as the combination of base and 1st level measures)
 [//]: # (2. We introduce ***TC*** and ***FC*** as the diagonal and off-diagonal confusion matrix elements (*i.e.* base measures))
 [//]: # (3. Entropic instruments (*HC*, *HO*, *HOC*, *MI*, and *nMI*)
+-->
